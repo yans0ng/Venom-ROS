@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+        <include file="$(find mavros)/launch/px4.launch">
+                <arg name="fcu_url" value="udp://:14540@127.0.0.1:14557"/>
+        </include>
+
+	<arg name="mynode" default="false"/>
+	<group if="$(arg mynode)">
+	  <node name="offb_circle" pkg="venom_offb" type="offb_circle" />
+	</group>
+</launch>
+

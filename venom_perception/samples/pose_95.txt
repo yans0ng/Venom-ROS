@@ -1,0 +1,52 @@
+header: 
+  seq: 793
+  stamp: 1517961090.027592819
+  frame_id: map
+pose: 
+  pose: 
+    position: 
+      x: -0.123817
+      y: -0.607281
+      z: 0.399797
+    orientation: 
+      x: 0.122053
+      y: 0.0400393
+      z: 0.724093
+      w: 0.677635
+  covariance[]
+    covariance[0]: 0
+    covariance[1]: 0
+    covariance[2]: 0
+    covariance[3]: 0
+    covariance[4]: 0
+    covariance[5]: 0
+    covariance[6]: 0
+    covariance[7]: 0
+    covariance[8]: 0
+    covariance[9]: 0
+    covariance[10]: 0
+    covariance[11]: 0
+    covariance[12]: 0
+    covariance[13]: 0
+    covariance[14]: 0
+    covariance[15]: 0
+    covariance[16]: 0
+    covariance[17]: 0
+    covariance[18]: 0
+    covariance[19]: 0
+    covariance[20]: 0
+    covariance[21]: 0
+    covariance[22]: 0
+    covariance[23]: 0
+    covariance[24]: 0
+    covariance[25]: 0
+    covariance[26]: 0
+    covariance[27]: 0
+    covariance[28]: 0
+    covariance[29]: 0
+    covariance[30]: 0
+    covariance[31]: 0
+    covariance[32]: 0
+    covariance[33]: 0
+    covariance[34]: 0
+    covariance[35]: 0

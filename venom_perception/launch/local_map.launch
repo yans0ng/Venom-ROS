@@ -1,0 +1,10 @@
+<?xml version="1.0"?> 
+<launch>
+  <arg name="pcd" default="$(find venom_perception)/samples/cloud_0.pcd" />
+  <arg name="pos" default="$(find venom_perception)/samples/pose_0.txt" />
+  <node name="local_map" pkg="venom_perception" type="local_map"
+        args="$(arg pcd) $(arg pos)" output="screen"/>
+
+  <arg name="rvizconfig" value="$(find venom_perception)/config/view.rviz"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true"/>
+</launch>

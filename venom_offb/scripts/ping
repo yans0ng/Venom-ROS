@@ -1,0 +1,37 @@
+#!/usr/bin/python
+
+# This script measures the latency of out navigation pipeline.
+
+import rospy
+
+rgb_flag = False
+rgb_time = None
+def rgb_cb():
+    pass
+
+yolo_flag = False
+yolo_time = None
+def yolo_cb():
+    pass
+
+setpoint_flag = False
+setpoint_time = None
+def setpoint_cb():
+    pass
+
+pose_state = 0
+move_time = None
+stable_time = None
+def pose_cb():
+    pass
+
+if __name__ == '__main__':
+    print ('PING navigation pipeline')
+    while True:
+        rgb_flag = True
+        pass
+        # TODO: implementation here
+        output = 'rgb={0} yolo={1} nav={2} fcu={3} move={4}'.format(\
+            1,2,3,4,5)
+        print (output)
+        rospy.sleep(1.0)

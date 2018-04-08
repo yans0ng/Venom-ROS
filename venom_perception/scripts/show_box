@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+import rospy
+import cv2
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge, CvBridgeError
+
+bridge = CvBridge()
+rgb_image = None
+
+def image_cb(data):
+  global rgb_image
+  try:
+    rgb_image = bridge.imgmsg_to_cv2(data, "bgr8")
+  except CvBridgeError as e:
+    print(e)
+
+if __name__ == '__main__':
+  rospy.init_node('listener', anonymous=True)
+  bb_sub = rospy.Subscriber('/venom/box_img',Image,image_cb)
+  cv2.namedWindow('bounding_box',cv2.WINDOW_NORMAL)
+  while not rospy.is_shutdown():
+    if rgb_image is not None:
+      cv2.imshow('bounding_box',rgb_image)
+
+    if cv2.waitKey(3) & 0xFF == ord('q'):
+      break
+  cv2.destroyAllWindows()
